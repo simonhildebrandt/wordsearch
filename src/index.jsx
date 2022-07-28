@@ -3,6 +3,10 @@ import "@babel/polyfill";
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-const App = () => "Rendered!";
 
-ReactDOM.render(<App/>, document.getElementById('app'));
+import { ChakraProvider } from '@chakra-ui/react';
+
+import App from './app';
+
+
+ReactDOM.render(<ChakraProvider><App/></ChakraProvider>, document.getElementById('app'));

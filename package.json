@@ -9,14 +9,23 @@
     "serve": "live-server --port=9000 --entry-file=index.html dev/",
     "build": "yarn esbuild src/index.jsx --bundle --outfile=dev/index.js",
     "watch": "yarn esbuild src/index.jsx --bundle --outfile=dev/index.js --watch",
-    "build_prod": "yarn esbuild src/index.jsx --bundle --outfile=public/index.js"
+    "build_prod": "yarn esbuild src/index.jsx --bundle --outfile=public/index.js",
+    "deploy_hosting": "yarn build_prod && yarn firebase deploy --only hosting"
   },
   "dependencies": {
     "@babel/polyfill": "^7.12.1",
+    "@blex41/word-search": "^1.2.0",
+    "@chakra-ui/react": "^1.8.3",
+    "@emotion/react": "^11",
+    "@emotion/styled": "^11",
     "esbuild": "^0.14.18",
+    "firebase-tools": "^10.2.0",
+    "framer-motion": "^6",
+    "immer": "^9.0.12",
     "live-server": "^1.2.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-markdown": "^5.0.3"
+    "react-markdown": "^5.0.3",
+    "styled-components": "^5.3.3"
   }
 }
